@@ -1,6 +1,6 @@
-numID = "123456782"
+numID = "123456780"
 
-def makelist(num):
+def check_id_valid(num):
     numlist = [int(digit) for digit in num]  # Convert numid characters to integers
     print(numlist)
     listwithnums = numlist.copy()  # Make a copy of numlist
@@ -27,11 +27,10 @@ def makelist(num):
         total = total + listcalc[i]  # The var "total" receives each number and adds to the total
     print(total)
 
+    if total % 10 == 0:
+        print("The ID is legit")
+    else:
+        print("The ID is not legit")
 
 
-
-
-
-
-
-makelist(numID)
+check_id_valid(numID)
